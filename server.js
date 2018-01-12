@@ -9,8 +9,8 @@ var passport = require('./config/passportConfig');
 var session = require('express-session');
 var app = express();
 
-
 var apiKey = 'd92f1c0ae2430c69eb20fefc46916e5e';
+
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extented: false}));
@@ -39,14 +39,13 @@ app.get('/profile', isLoggedIn, function(req, res){
 
 app.use('/auth', require('./controllers/auth'));
 
-
-app.use(express.static(__dirname + '/public'));
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs')
 
 app.get('/', function (req, res) {
   res.render('index', {weather: null, error: null});
-});
+})
 
 app.post('/', function (req, res) {
   let city = req.body.city;
@@ -67,11 +66,6 @@ app.post('/', function (req, res) {
   });
 })
 
-app.get('/profile', isLoggedIn, function(req,res){
-
-});
-
-
 app.listen(3000, function () {
-  console.log('listening on port 3000!')
-});
+  console.log('Example app listening on port 3000!')
+})
