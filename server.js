@@ -9,6 +9,7 @@ var passport = require('./config/passportConfig');
 var session = require('express-session');
 var app = express();
 
+
 var apiKey = 'd92f1c0ae2430c69eb20fefc46916e5e';
 
 
@@ -66,6 +67,6 @@ app.post('/', function (req, res) {
   });
 })
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000) () {
   console.log('Example app listening on port 3000!')
 })
