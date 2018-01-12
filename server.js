@@ -10,7 +10,7 @@ var session = require('express-session');
 var app = express();
 
 
-const apiKey = 'd92f1c0ae2430c69eb20fefc46916e5e';
+var apiKey = 'd92f1c0ae2430c69eb20fefc46916e5e';
 
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extented: false}));

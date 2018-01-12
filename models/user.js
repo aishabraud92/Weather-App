@@ -39,7 +39,7 @@ module.exports = function(sequelize, DataTypes) {
     },
     classMethods: {
       associate: function(models) {
-        // associations can be defined here
+        // associations 
       }
     }
   });
@@ -53,3 +53,7 @@ module.exports = function(sequelize, DataTypes) {
     delete user.password;
     return user;
   }
+
+
+  return user;
+};
