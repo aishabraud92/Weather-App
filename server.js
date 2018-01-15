@@ -1,44 +1,9 @@
-require('dotenv').config();
-var express = require('express');
-var ejsLayouts = require('express-ejs-layouts');
-var flash = require('connect-flash');
-var bodyParser = require('body-parser');
-var request = require('request');
-var isLoggedIn = require('./middleware/isLoggedIn');
-var passport = require('./config/passportConfig');
-var session = require('express-session');
-var app = express();
+const express = require('express');
+const bodyParser = require('body-parser');
+const request = require('request');
+const app = express()
 
-
-var apiKey = 'd92f1c0ae2430c69eb20fefc46916e5e';
-
-
-app.set('view engine', 'ejs');
-app.use(bodyParser.urlencoded({ extented: false}));
-app.use(ejsLayouts);
-app.use(session({
-  secret: process.env.SESSION_SECRET,
-  resave: false,
-  saveUninitialized: true
-}));
-app.use(flash());
-app.use(passport.initialize());
-app.use(passport.session());
-app.use(function(req, res, next){
-  res.locals.currentUser = req.user;
-  res.locals.alerts = req.flash();
-  next();
-});
-
-app.get('/', function(req, res){
-  res.render('home');
-});
-
-app.get('/profile', isLoggedIn, function(req, res){
-  res.render('profile');
-});
-
-app.use('/auth', require('./controllers/auth'));
+const apiKey = '4e774ad9239c1c509ac93bfe7e41a5f0';
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -67,6 +32,6 @@ app.post('/', function (req, res) {
   });
 })
 
-app.listen(process.env.PORT || 3000) () {
+app.listen(3000, function () {
   console.log('Example app listening on port 3000!')
 })
