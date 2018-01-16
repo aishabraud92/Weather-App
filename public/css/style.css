@@ -2,6 +2,8 @@ body {
   width: 800px;
   margin: 0 auto;
   font-family: 'Open Sans', sans-serif;
+  background-image: url('https://report.az/storage/news/31b824ba72a54deca4ef4d0100de4b3d/b246b188-eae4-497a-9b59-7767b754e26c.jpg');
+
 }
 .container {
   width: 600px;
