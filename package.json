@@ -1,39 +1,29 @@
 {
-  "name": "weather-app",
+  "name": "simple-nodejs-weather-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "A node express app that allows user to see the current temperature of different cities around the world.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aishabraud92/Weather-App.git"
+    "url": "git+https://github.com/aishabraud92/Weather_AppWDIP2.git"
   },
-  "author": "",
+  "author": "Aisha Braud",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aishabraud92/Weather-App/issues"
+    "url": "https://github.com/aishabraud92/Weather_AppWDIP2"
   },
-  "homepage": "https://github.com/aishabraud92/Weather-App#readme",
+  "homepage": "https://github.com/aishabraud92/Weather_AppWDIP2",
   "dependencies": {
     "bcrypt": "^1.0.3",
-    "body-parser": "^1.18.2",
-    "connect-flash": "^0.1.1",
-    "dotenv": "^4.0.0",
-    "ejs": "^2.5.7",
-    "express": "^4.16.2",
-    "express-ejs-layouts": "^2.3.1",
-    "express-session": "^1.15.6",
-    "geocoder": "^0.2.3",
-    "local": "^0.3.3",
-    "passport": "^0.4.0",
-    "passport-facebook": "^2.1.1",
-    "passport-local": "^1.0.0",
-    "pg": "^6.4.1",
-    "pg-hstore": "^2.3.2",
-    "process": "^0.11.10",
-    "sequelize": "^4.29.0",
-    "yargs": "^10.1.1"
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {
+    
   }
 }
